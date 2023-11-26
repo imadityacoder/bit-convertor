@@ -1,18 +1,30 @@
+# bit convetor - it convert a binary to decimal and a decimal to binary
 
+#Bit convertor made by Aditya
 
 while True:
 
-    inp =input("\n\nenter '1' for binary to decimalor '0' for decimal to binary and 'e' for exit\n\n:")
+    inp =input("\n\nEnter '1' for convert binary to decimal or '0' for decimal to binary | 'e' for exit\n:")
 
     number = input(f"\nenter value here: \n")
 
-
     def bin_to_dec(binary):
 
-        binary = int(binary)
-        dec_arry = {}
-        pass
+        decimal = int()
+            
+        for n in binary[::-1]:
+            n = int(n)
 
+            if n == (0 or 1):
+                exponent = 0
+                num = n*2^exponent
+                exponent += 1
+                decimal += num
+
+            else:
+                print("enter a valid binary digits!!!")    
+
+        print(decimal)    
 
     def dec_to_bin(decimal):
         decimal = int(decimal)
@@ -43,4 +55,4 @@ while True:
 
     elif (inp and number) == "e": break
 
-    else:print("choose '1' or '0' .")
+    else:print("Please choose '1' or '0' !!!")
